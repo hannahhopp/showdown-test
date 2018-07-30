@@ -1,5 +1,5 @@
 import m from "mithril";
 
-import test from "./views/test";
+import Test from "./views/test";
 
-m.mount(document.body, test);
+m.render(document.body, m(Test));

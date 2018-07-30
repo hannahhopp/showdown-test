@@ -1,7 +1,14 @@
 import m from "mithril";
+import showdown from "showdown";
 
-export default {
+const converter = new showdown.Converter();
+
+const Test = {
+    text : '# hello, markdown!',
+
     view : () => {
-       return m("p", "This is your mithril app base");
+        return converter.makeHtml(Test.text);
     } 
 }
+
+export default Test;
